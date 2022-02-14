@@ -3,15 +3,14 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   height: auto;
   min-height: 100% !important;
-  height: 100%;
-  max-height: 100%
   font-family: "Roboto Slab", serif;
   position: relative;
 `;
 
 export const Wrapper1 = styled.div`
   background-image: url("./background.png");
-  background-size: auto 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   position: relative;
@@ -20,10 +19,13 @@ export const Wrapper1 = styled.div`
 export const Wrapper2 = styled.div`
   font-family: "Roboto Slab", serif;
   margin: auto;
-  max-height: 100vh;
-  width: 33%;
-  min-width: 33%;
+  width: 100%;
+  min-width: 100%;
   padding: 300px 0px 0px 0px;
+  display:block;
+  @media(max-width : 998px){
+    padding:100px 0 0 0;
+  }
 `;
 
 export const Header = styled.header`
@@ -50,8 +52,15 @@ export const LogoButton = styled.button`
 `;
 
 export const MainContent = styled.div`
-  width: 700px;
+  width: 614.4px;
+  margin:0 auto;
   background-color: #55555599;
+  @media (max-width:768px){
+    text-align:center; @media (max-width : 768px){
+      font-size:10px;
+    width:80%;
+    height:80%;
+  }
 `;
 
 export const PreviewImageContent = styled.div`
@@ -94,6 +103,7 @@ export const InfoContent = styled.div`
   width: 100%;
   align-items: center;
   @media (max-width: 998px) {
+    display:block;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -105,15 +115,9 @@ export const Discription = styled.div`
   flex-direction: column;
   width: 100%;
   color: white;
-  @media (max-width: 998px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
   ul {
     display: block;
-    font-size: 18px;
+    font-size: 15px;
     list-style-type: disc;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -129,6 +133,9 @@ export const Discription = styled.div`
   }
   li {
     margin-top: 5px;
+  }
+  @media(max-width:998px){
+    text-align:left;
   }
 `;
 

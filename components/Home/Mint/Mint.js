@@ -48,6 +48,7 @@ import withReactContent from "sweetalert2-react-content";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MainHeader from "../../Header";
+import './Mint.module.css';
 
 const MintAlert = withReactContent(Swal);
 const ErrorLog = [
@@ -727,7 +728,7 @@ const Mint = () => {
         connected={connected}
         signerAddress={signerAddress}
       />
-      <Wrapper2>
+      <Wrapper2 className={"wrapper2"}>
         <MainContent>
           {/* <PreviewImage>
             <PreviewImageContent>
