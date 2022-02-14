@@ -16,7 +16,7 @@ import Web3Modal from "web3modal";
 // Contract
 import SmartContract from "../../../ABI/Shrooms.json";
 
-const SmartContractAddress = "0xef898cdcfDE0E5c7c8223851AF4B856232a2c938";
+const SmartContractAddress = "0x0b224B6B24A6d5afB14006A97f0872F4e881c283";
 
 // Components
 import MintProgress from "./MintProgress/MintProgress";
@@ -91,8 +91,8 @@ const Mint = () => {
   const [connected, setConnected] = useState(false);
   const [signerAddress, setSignerAddress] = useState("");
   const [currentBalance, setCurrentBalance] = useState(0);
-  const [estimatedPrice, setEstimatedPrice] = useState(1);
-  const [priceofNShrmy, setPriceOfNShrmy] = useState(1);
+  const [estimatedPrice, setEstimatedPrice] = useState(0.01);
+  const [priceofNShrmy, setPriceOfNShrmy] = useState(0.01);
 
   const [loading, setLoading] = useState(false);
   const [balanceLoading, setBalanceLoading] = useState(false);
@@ -554,9 +554,12 @@ const Mint = () => {
               signer
             );
             console.log(amount, (estimatedPrice * 1e18).toString());
-            await contract.mint(amount, {
+            let tx = await contract.mint(amount, {
               value: (estimatedPrice * 1e18).toString(),
             });
+            await tx.wait();
+
+            getSold();
 
             preMintedCnt++;
 
@@ -707,6 +710,7 @@ const Mint = () => {
   };
 
   useEffect(() => {
+    setPrice(0.01);
     web3 = new Web3(window.ethereum);
     checkNetwork();
   }, []);

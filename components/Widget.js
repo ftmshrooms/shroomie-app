@@ -1,14 +1,17 @@
 import styled from "styled-components";
 //   background-color: #4831d4;
 export const Wrapper = styled.div`
-  min-height: 100vh;
+  height: auto;
+  min-height: 100% !important;
+  height: 100%;
+  max-height: 100%
   font-family: "Roboto Slab", serif;
   position: relative;
 `;
 
 export const Wrapper1 = styled.div`
   background-image: url("./background.png");
-  background-size: cover;
+  background-size: auto 100%;
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   position: relative;
@@ -17,8 +20,9 @@ export const Wrapper1 = styled.div`
 export const Wrapper2 = styled.div`
   font-family: "Roboto Slab", serif;
   margin: auto;
-  width: 380px;
-  min-width: 380px;
+  max-height: 100vh;
+  width: 33%;
+  min-width: 33%;
   padding: 300px 0px 0px 0px;
 `;
 
@@ -46,7 +50,7 @@ export const LogoButton = styled.button`
 `;
 
 export const MainContent = styled.div`
-  width: 380px;
+  width: 700px;
   background-color: #55555599;
 `;
 
@@ -151,7 +155,8 @@ export const PriceBox = styled.div`
 `;
 
 export const MintForm = styled.div`
-  max-width: 380px;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;

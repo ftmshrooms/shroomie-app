@@ -20,9 +20,10 @@ import Loading from "../components/Loading";
 import { useRouter } from "next/router";
 import { web3, provider, signer } from "../components/Home/Mint/Mint";
 
-const SmartContractAddress = "0xef898cdcfDE0E5c7c8223851AF4B856232a2c938";
+const SmartContractAddress = "0x0b224B6B24A6d5afB14006A97f0872F4e881c283";
 let contract = undefined;
 let shrooms = [];
+// let shroomies = ["https://ipfs.io/ipfs/QmSvwUwweVNW3uF3eMum96Y16XUTEu79vFvRjUJNoue4VX/10"];
 
 export default function Shrooms() {
   const router = useRouter();
@@ -63,6 +64,8 @@ export default function Shrooms() {
             let jsonData = getJSONP(tokenUrl);
             shrooms[i] = await jsonData;
           }
+          // let jsonData = getJSONP(shroomies[0]);
+          //   shroomies[0] = await jsonData;
           // for (var i = 0; i < balanceOf; i++) {
           //   let tokenIndex = await contract.tokenOfOwnerByIndex(address[0], i);
           //   shrooms[i] = tokenIndex.toString();
