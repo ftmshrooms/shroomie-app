@@ -37,7 +37,7 @@ const Info = () => {
                 rel="noreferrer"
               >
                 <img
-                  src="https://spacecatsnft.io/socials/twitter.png"
+                  src="./twitter.png"
                   data-nsfw-filter-status=""
                   alt=""
                 />
