@@ -9,11 +9,15 @@ export const Wrapper = styled.div`
 
 export const Wrapper1 = styled.div`
   background-image: url("./background.png");
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
   position: relative;
+  @media(max-width : 998px){
+    background-image: url("./mobile-background.jpg");
+  }
 `;
 
 export const Wrapper2 = styled.div`
