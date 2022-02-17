@@ -793,10 +793,10 @@ const Mint = () => {
               {/* <MintProgress progress={100} /> */}
 
               <Typography component="p" className={globalClasses.amountLabel}>
-                Amount to mint
+                MINT A SHROOMIE 
               </Typography>
               <Typography component="p" className={globalClasses.amountText}>
-                (50% Discount: 1 Shroomy = 1FTM)
+                (1 Shroomie = 1FTM)
                 {/* {!connected &&
                   <span style={{ fontWeight: 400, color: "#888" }}>N/A&nbsp;</span>
                 } */}
@@ -898,11 +898,11 @@ const Mint = () => {
             <Discription>
               <ul>
                 <li>
-                  Every FTM.Shroomies holder gets a free FTM.Shroomies NFT
-                  airdrop
+                  Every FTM.Shrooms holder gets 1 free Shroomies NFT
+                  per wallet
                 </li>
                 <ul>
-                  <li>1 Shroomie NFT per wallet</li>
+                  <li>Holder snapshot - 17th Feb 11pm UTC</li>
                 </ul>
                 <li>Rest will be available for public for 1FTM per mint</li>
                 <li>
@@ -910,7 +910,7 @@ const Mint = () => {
                   charity
                 </li>
                 <li>
-                  50% of Shroomies sales will be won by 3 holders of at least
+                  Up to 2.000$FTM (if we sell out) will be won by 3 holders of at least
                   1FTM.Shroomie (winners will be drawn randomly - 60/30/10
                   split)
                   {/* <ul>
