@@ -88,7 +88,7 @@ const Mint = () => {
   const globalClasses = globalUseStyles();
   const [amount, setAmount] = useState(1);
   const [sold, setSold] = useState();
-  const [price, setPrice] = useState(0.01);
+  const [price, setPrice] = useState(1);
   const [connected, setConnected] = useState(false);
   const [signerAddress, setSignerAddress] = useState("");
   const [currentBalance, setCurrentBalance] = useState(0);
@@ -711,7 +711,7 @@ const Mint = () => {
   };
 
   useEffect(() => {
-    setPrice(0.01);
+    setPrice(1);
     web3 = new Web3(window.ethereum);
     checkNetwork();
   }, []);
