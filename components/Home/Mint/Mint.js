@@ -751,20 +751,19 @@ const Mint = () => {
                       className={globalClasses.tooltipText}
                     >
                       🍄 Get no more than 10 Shroomies per mint – 1FTM per
-                      Shroomy
+                      Shroomie
                     </Typography>
                     <Typography
                       component="p"
                       className={globalClasses.tooltipText}
                     >
-                      🍄 For FTM.Shroom holders 1 Shroomy for free
+                      🍄 For FTM.Shroom holders 1 Shroomie for free
                     </Typography>
                     <Typography
                       component="p"
                       className={globalClasses.tooltipText}
                     >
-                      🍄 5000 Shroomies for community treasury (will be minted
-                      by the team)
+                      🍄 Up to $FTM 2.000 can be won by 3 lucky holders! 
                     </Typography>
                     {/* <Typography component="p" className={globalClasses.tooltipText}>
                       👍 1501-2000 for 80 FTM
