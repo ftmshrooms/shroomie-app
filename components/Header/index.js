@@ -35,7 +35,7 @@ export default function MainHeader({
           className={globalClasses.connectButton}
           onClick={() => router.push("/shroomies")}
         >
-          MY SHROOMIES
+          SEE NFT
         </Button>
         <div style={{height: "5px", width: "5px"}}></div>
         <Button

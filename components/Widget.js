@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
 export const Wrapper1 = styled.div`
   background-image: url("./background.png");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
