@@ -30,7 +30,7 @@ const globalUseStyles = makeStyles(() => ({
         color: '#fff',
         background: '#006b94',
         border: '1px solid #006b94',
-        fontSize: 18,
+        fontSize: 12,
         fontFamily: "Roboto Slab",
         letterSpacing: 4,
         fontWeight: 700,

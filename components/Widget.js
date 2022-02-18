@@ -34,10 +34,6 @@ export const Wrapper2 = styled.div`
 
 export const Wrapper3 = styled.div`
   z-index: 5;
-  @media(max-width : 375px){
-    position: absolute;
-    left: 100px;
-  }
 `;
 
 export const Header = styled.header`
@@ -152,7 +148,10 @@ export const Discription = styled.div`
 `;
 
 export const Div = styled.div`
-  display: block;
+  display: flex;
+  @media(max-width: 768px){
+    display: block;
+  }
 `;
 
 export const Img = styled.img`

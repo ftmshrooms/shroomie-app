@@ -29,20 +29,20 @@ export default function MainHeader({
           />
         </LogoButton>
       </Div>
-      <Wrapper3>
+      <Div>
         <Button
+          variant="contained"
           className={globalClasses.connectButton}
           onClick={() => router.push("/shrooms")}
-          style={{fontSize: "15px"}}
         >
           MY SHROOMIES
         </Button>
+        <div style={{height: "5px", width: "5px"}}></div>
         <Button
           variant="contained"
           onClick={handleConnection}
           className={globalClasses.connectButton}
           disabled={connected}
-          style={{fontSize: "15px"}}
         >
           {connected ? (
             <p style={{ letterSpacing: 2 }}>
@@ -54,7 +54,7 @@ export default function MainHeader({
             <p>Connect</p>
           )}
         </Button>
-      </Wrapper3>
+      </Div>
     </Header>
   );
 }
