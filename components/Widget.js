@@ -32,6 +32,14 @@ export const Wrapper2 = styled.div`
   }
 `;
 
+export const Wrapper3 = styled.div`
+  z-index: 5;
+  @media(max-width : 375px){
+    position: absolute;
+    left: 100px;
+  }
+`;
+
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;

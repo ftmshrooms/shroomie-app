@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { Button } from "@mui/material";
 import React from "react";
 import globalUseStyles from "../styleHook";
-import { Header, Div, Img, LogoButton } from "../Widget";
+import { Header, Div, Img, LogoButton, Wrapper3 } from "../Widget";
 
 export default function MainHeader({
   handleConnection,
@@ -29,10 +29,11 @@ export default function MainHeader({
           />
         </LogoButton>
       </Div>
-      <div>
+      <Wrapper3>
         <Button
-          className={globalClasses.linkButton}
+          className={globalClasses.connectButton}
           onClick={() => router.push("/shrooms")}
+          style={{fontSize: "15px"}}
         >
           MY SHROOMIES
         </Button>
@@ -41,6 +42,7 @@ export default function MainHeader({
           onClick={handleConnection}
           className={globalClasses.connectButton}
           disabled={connected}
+          style={{fontSize: "15px"}}
         >
           {connected ? (
             <p style={{ letterSpacing: 2 }}>
@@ -52,7 +54,7 @@ export default function MainHeader({
             <p>Connect</p>
           )}
         </Button>
-      </div>
+      </Wrapper3>
     </Header>
   );
 }
