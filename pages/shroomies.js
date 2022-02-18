@@ -23,7 +23,6 @@ import { web3, provider, signer } from "../components/Home/Mint/Mint";
 const SmartContractAddress = "0xd19a7F4e93794A0b35AfAA343E8A8608aBbA0278";
 let contract = undefined;
 let shrooms = [];
-// let shroomies = ["https://ipfs.io/ipfs/QmSvwUwweVNW3uF3eMum96Y16XUTEu79vFvRjUJNoue4VX/10"];
 
 export default function Shrooms() {
   const router = useRouter();
@@ -55,17 +54,6 @@ export default function Shrooms() {
         setBalanceOf(balanceOf);
         if (balanceOf !== "0") {
           setEmpty(false);
-          // let tokenURIs = await contract.getTokenURIs(address[0]);
-          // console.log("tokenURIs", tokenURIs);
-          // for (var i = 0; i < Number(balanceOf); i++) {
-          //   // let tokenUrl = await contract.tokenURI(tokenIDs[i].toString());
-          //   let tokenUrl = tokenURIs[i].toString();
-          //   console.log("tokenURL", tokenUrl);
-          //   let jsonData = getJSONP(tokenUrl);
-          //   shrooms[i] = await jsonData;
-          // }
-          // let jsonData = getJSONP(shroomies[0]);
-          //   shroomies[0] = await jsonData;
           let indexes = await contract.walletOfOwner(address[0]);
           console.log("indexes", indexes);
           for (var i = 0; i < Number(balanceOf); i++) {
@@ -88,8 +76,6 @@ export default function Shrooms() {
       setIsLoading(false);
 
       console.log("empty:", empty);
-      // if (account === "")
-      //   setAccount("0x4557adba9ed5249a90c6aa5af855788414de2f15");
     }
   };
 
@@ -116,7 +102,7 @@ export default function Shrooms() {
         {empty === true && (
           <div style={{ position: "relative", zIndex: 4 }}>
             <Typography className={globalClasses.emptyText}>
-              You don&apos;t have any Shrooms
+              You don&apos;t have any Shroomies
             </Typography>
             <Button
               onClick={() => router.push("/")}
@@ -169,7 +155,7 @@ export default function Shrooms() {
         </Grid>
       </Container>
       <Loading loading={isLoading} />
-      <Background />
+      {/* <Background /> */}
     </Wrapper1>
   );
 }

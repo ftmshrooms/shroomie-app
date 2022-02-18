@@ -33,7 +33,7 @@ export default function MainHeader({
         <Button
           variant="contained"
           className={globalClasses.connectButton}
-          onClick={() => router.push("/shrooms")}
+          onClick={() => router.push("/shroomies")}
         >
           MY SHROOMIES
         </Button>
