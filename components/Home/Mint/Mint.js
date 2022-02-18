@@ -911,7 +911,7 @@ const Mint = () => {
                 </li>
                 <li>
                   Up to 2.000$FTM (if we sell out) will be won by 3 holders of at least
-                  1FTM.Shroomie (winners will be drawn randomly - $FTM 1000/700/100)
+                  1FTM.Shroomie (winners will be drawn randomly - $FTM 1000/700/300)
                   split)
                   {/* <ul>
                     <li>
