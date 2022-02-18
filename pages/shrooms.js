@@ -20,7 +20,7 @@ import Loading from "../components/Loading";
 import { useRouter } from "next/router";
 import { web3, provider, signer } from "../components/Home/Mint/Mint";
 
-const SmartContractAddress = "0x40B1ad74ECd594977dE1dCA444D5341917C02B7C";
+const SmartContractAddress = "0xd19a7F4e93794A0b35AfAA343E8A8608aBbA0278";
 let contract = undefined;
 let shrooms = [];
 // let shroomies = ["https://ipfs.io/ipfs/QmSvwUwweVNW3uF3eMum96Y16XUTEu79vFvRjUJNoue4VX/10"];
