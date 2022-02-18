@@ -20,7 +20,7 @@ import Loading from "../components/Loading";
 import { useRouter } from "next/router";
 import { web3, provider, signer } from "../components/Home/Mint/Mint";
 
-const SmartContractAddress = "0x0b224B6B24A6d5afB14006A97f0872F4e881c283";
+const SmartContractAddress = "0x40B1ad74ECd594977dE1dCA444D5341917C02B7C";
 let contract = undefined;
 let shrooms = [];
 // let shroomies = ["https://ipfs.io/ipfs/QmSvwUwweVNW3uF3eMum96Y16XUTEu79vFvRjUJNoue4VX/10"];
@@ -55,25 +55,28 @@ export default function Shrooms() {
         setBalanceOf(balanceOf);
         if (balanceOf !== "0") {
           setEmpty(false);
-          let tokenURIs = await contract.getTokenURIs(address[0]);
-          console.log("tokenURIs", tokenURIs);
+          // let tokenURIs = await contract.getTokenURIs(address[0]);
+          // console.log("tokenURIs", tokenURIs);
+          // for (var i = 0; i < Number(balanceOf); i++) {
+          //   // let tokenUrl = await contract.tokenURI(tokenIDs[i].toString());
+          //   let tokenUrl = tokenURIs[i].toString();
+          //   console.log("tokenURL", tokenUrl);
+          //   let jsonData = getJSONP(tokenUrl);
+          //   shrooms[i] = await jsonData;
+          // }
+          // let jsonData = getJSONP(shroomies[0]);
+          //   shroomies[0] = await jsonData;
+          let indexes = await contract.walletOfOwner(address[0]);
+          console.log("indexes", indexes);
           for (var i = 0; i < Number(balanceOf); i++) {
-            // let tokenUrl = await contract.tokenURI(tokenIDs[i].toString());
-            let tokenUrl = tokenURIs[i].toString();
+            // let tokenIndex = await contract.tokenOfOwnerByIndex(address[0], i);
+            shrooms[i] = indexes[i].toString();
+            let tokenUrl = await contract.tokenURI(shrooms[i]);
+            tokenUrl = tokenUrl.toString();
             console.log("tokenURL", tokenUrl);
             let jsonData = getJSONP(tokenUrl);
             shrooms[i] = await jsonData;
           }
-          // let jsonData = getJSONP(shroomies[0]);
-          //   shroomies[0] = await jsonData;
-          // for (var i = 0; i < balanceOf; i++) {
-          //   let tokenIndex = await contract.tokenOfOwnerByIndex(address[0], i);
-          //   shrooms[i] = tokenIndex.toString();
-          //   let tokenUrl = await contract.tokenURI(shrooms[i]);
-          //   tokenUrl = tokenUrl.toString();
-          //   let jsonData = getJSONP(tokenUrl);
-          //   shrooms[i] = await jsonData;
-          // }
         } else {
           setEmpty(true);
           setIsLoading(false);

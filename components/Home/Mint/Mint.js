@@ -16,7 +16,7 @@ import Web3Modal from "web3modal";
 // Contract
 import SmartContract from "../../../ABI/Shrooms.json";
 
-const SmartContractAddress = "0x0b224B6B24A6d5afB14006A97f0872F4e881c283";
+const SmartContractAddress = "0x40B1ad74ECd594977dE1dCA444D5341917C02B7C";
 
 // Components
 import MintProgress from "./MintProgress/MintProgress";
@@ -244,7 +244,7 @@ const Mint = () => {
     //   provider
     // );
 
-    const sold = await contract.totalMinted();
+    const sold = await contract.totalSupply();
     setSold(sold.toString());
     return sold.toString();
   };
