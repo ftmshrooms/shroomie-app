@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 export const Wrapper1 = styled.div`
   background-image: url("./background.png");
   background-position: center top;
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   min-height: 100vh;
   font-family: "Roboto Slab", serif;
