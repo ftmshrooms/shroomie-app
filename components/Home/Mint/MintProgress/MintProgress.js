@@ -26,12 +26,12 @@ const BorderLinearProgress = MuiStyle(LinearProgress)(({ theme }) => ({
 }));
 
 const MintProgress = (props) => {
-  const globalClasses = globalUseStyles()
+  const globalClasses = globalUseStyles();
   return (
     <Wrapper>
       <BorderLinearProgress
         variant="determinate"
-        value={(props.progress / 500) * 100}
+        value={(props.progress / 5000) * 100}
         className="progress"
       />
     </Wrapper>

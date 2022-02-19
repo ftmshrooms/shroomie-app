@@ -58,8 +58,8 @@ export default function Shrooms() {
           console.log("indexes", indexes);
           for (var i = 0; i < Number(balanceOf); i++) {
             // let tokenIndex = await contract.tokenOfOwnerByIndex(address[0], i);
-            shrooms[i] = indexes[i].toString();
-            let tokenUrl = await contract.tokenURI(shrooms[i]);
+            let id = indexes[i].toString();
+            let tokenUrl = await contract.tokenURI(id);
             tokenUrl = tokenUrl.toString();
             console.log("tokenURL", tokenUrl);
             let jsonData = getJSONP(tokenUrl);

@@ -32,7 +32,7 @@ const Info = () => {
           <div className="socials">
             <IconButton>
               <a
-                href="https://twitter.com/FtmShrooms"
+                href="https://twitter.com/FantomShrooms"
                 target="_blank"
                 rel="noreferrer"
               >
