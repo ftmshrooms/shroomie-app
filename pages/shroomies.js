@@ -20,7 +20,7 @@ import Loading from "../components/Loading";
 import { useRouter } from "next/router";
 import { web3, provider, signer } from "../components/Home/Mint/Mint";
 
-const SmartContractAddress = "0xd19a7F4e93794A0b35AfAA343E8A8608aBbA0278";
+const SmartContractAddress = "0x7E797a82DE0C182eFE8B89E04aba0426F657B774";
 let contract = undefined;
 let shrooms = [];
 
